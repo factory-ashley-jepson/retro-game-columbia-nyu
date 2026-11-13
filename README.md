@@ -6,7 +6,7 @@ You start with an old-school computer that's switched on and says `READY.`, with
 
 <p align="center"><img src="docs/assets/game-shell.png" alt="An empty retro computer whose screen says READY." width="560" /></p>
 
-Built for the Women in AI workshop (Factory, Sapienne, and Sequoia, October 27, 2026). Setup page: **https://factory-ashley-jepson.github.io/retro-game/**
+Built for Factory Docking Station: Columbia & NYU (New York, November 13, 2026). Setup page: **https://factory-ashley-jepson.github.io/retro-game-columbia-nyu/**
 
 ## Setup (5 minutes)
 
@@ -14,7 +14,7 @@ Built for the Women in AI workshop (Factory, Sapienne, and Sequoia, October 27, 
 2. **Install the kit.** Start a new session and paste:
 
    ```text
-   Install the retro game workshop kit for me. Download https://github.com/factory-ashley-jepson/retro-game/archive/refs/heads/main.zip to a temporary folder and unzip it. Copy the game folder inside retro-game-main to a new folder named my-game in my home folder: ~/my-game on Mac, or %USERPROFILE%\my-game on Windows. If my-game already exists, ask me before changing it. Then copy the four skill folders inside retro-game-main/.factory/skills (plan-game, build-game, playtest, ship-game) into my personal skills folder: ~/.factory/skills on Mac, or %USERPROFILE%\.factory\skills on Windows. Create any folders that are missing, and don't change anything else. Open my-game/index.html in my browser so I can see the empty computer, then tell me to start a new session and type /plan-game.
+   Install the retro game workshop kit for me. Download https://github.com/factory-ashley-jepson/retro-game-columbia-nyu/archive/refs/heads/main.zip to a temporary folder and unzip it. Copy the game folder inside retro-game-columbia-nyu-main to a new folder named my-game in my home folder: ~/my-game on Mac, or %USERPROFILE%\my-game on Windows. If my-game already exists, ask me before changing it. Then copy the four skill folders inside retro-game-columbia-nyu-main/.factory/skills (plan-game, build-game, playtest, ship-game) into my personal skills folder: ~/.factory/skills on Mac, or %USERPROFILE%\.factory\skills on Windows. Create any folders that are missing, and don't change anything else. Open my-game/index.html in my browser so I can see the empty computer, then tell me to start a new session and type /plan-game.
    ```
 
 ## Build it like a real team

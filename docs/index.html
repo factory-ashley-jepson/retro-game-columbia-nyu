@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Build your own retro game · Women in AI workshop</title>
-<meta name="description" content="Setup for the Women in AI hands-on workshop: build your own retro game with Factory." />
+<title>Build your own retro game · Factory Docking Station: Columbia &amp; NYU</title>
+<meta name="description" content="Setup for the Factory Docking Station: Columbia &amp; NYU hands-on workshop: build your own retro game with Factory." />
 <link rel="stylesheet" href="./assets/brand-fonts.css" />
 <style>
   :root {
@@ -33,8 +33,7 @@
   .lockups { display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; }
   .lockups img { display: block; }
   .lockups .factory { height: 26px; }
-  .lockups .sapienne { height: 38px; }
-  .lockups .sequoia { height: 21px; }
+  .lockups .schools { font-family: 'Geist Mono', monospace; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; }
   .lockups .x { font-family: 'Geist Mono', monospace; color: var(--muted); }
   .eyebrow {
     margin-top: 44px;
@@ -123,16 +122,14 @@
   <div class="lockups">
     <img class="factory" src="./assets/factory-lockup-white.svg" alt="Factory" />
     <span class="x">&times;</span>
-    <img class="sapienne" src="./assets/sapienne-white.svg" alt="Sapienne" />
-    <span class="x">&times;</span>
-    <img class="sequoia" src="./assets/sequoia-white.png" alt="Sequoia" />
+    <span class="schools">Columbia &amp; NYU</span>
   </div>
 
-  <p class="eyebrow"><span class="dot"></span>Women in AI &middot; Hands-on workshop</p>
+  <p class="eyebrow"><span class="dot"></span>Factory Docking Station &middot; Hands-on workshop</p>
   <h1>Build your own retro game</h1>
   <p class="lead">You get an old-school computer that's switched on, with nothing inside. In 30 minutes, you'll describe a game, and Droid will plan it, build it, test it, and pack it into one file you can send to anyone. No coding experience needed.</p>
   <img class="hero-img" src="./assets/game-shell.png" alt="An empty retro computer whose screen says READY." />
-  <p class="laptop-note">Open this page on your laptop: <strong id="short-url">factory-ashley-jepson.github.io/retro-game</strong></p>
+  <p class="laptop-note">Open this page on your laptop: <strong id="short-url">factory-ashley-jepson.github.io/retro-game-columbia-nyu</strong></p>
 
   <h2>Get set up <span class="time">5 minutes</span></h2>
   <p class="sub">Do these before we start if you can. Raise your hand if anything gets stuck.</p>
@@ -153,14 +150,14 @@
       <h3>Claim tonight's credits</h3>
       <p>Enter your name and email, and we'll email you a personal link to claim your credits. It arrives in about a minute.</p>
       <div class="buttons">
-        <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdcw4dzM5eBTizZDiO0_YMQGqaliev-sMMipXG_DQlS3eOqAQ/viewform" target="_blank" rel="noopener">Get my credits</a>
+        <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfSjSOIzurrzi0rymdxvnKNLQdv4AH1o8I1BIRPmWX3lyigoQ/viewform" target="_blank" rel="noopener">Get my credits</a>
       </div>
       <p class="hint">Open the email, select <strong>Claim your credits</strong>, and sign in to the Factory app with the same account. No email after 2 minutes? Check spam, then ask a host.</p>
     </li>
     <li>
       <h3>Install the workshop kit</h3>
       <p>Start a new session in the Factory app, paste this in, and approve the steps Droid asks about. You'll see your empty computer when it's done.</p>
-      <div class="prompt" id="install-prompt">Install the retro game workshop kit for me. Download https://github.com/factory-ashley-jepson/retro-game/archive/refs/heads/main.zip to a temporary folder and unzip it. Copy the game folder inside retro-game-main to a new folder named my-game in my home folder: ~/my-game on Mac, or %USERPROFILE%\my-game on Windows. If my-game already exists, ask me before changing it. Then copy the four skill folders inside retro-game-main/.factory/skills (plan-game, build-game, playtest, ship-game) into my personal skills folder: ~/.factory/skills on Mac, or %USERPROFILE%\.factory\skills on Windows. Create any folders that are missing, and don't change anything else. Open my-game/index.html in my browser so I can see the empty computer, then tell me to start a new session and type /plan-game.</div>
+      <div class="prompt" id="install-prompt">Install the retro game workshop kit for me. Download https://github.com/factory-ashley-jepson/retro-game-columbia-nyu/archive/refs/heads/main.zip to a temporary folder and unzip it. Copy the game folder inside retro-game-columbia-nyu-main to a new folder named my-game in my home folder: ~/my-game on Mac, or %USERPROFILE%\my-game on Windows. If my-game already exists, ask me before changing it. Then copy the four skill folders inside retro-game-columbia-nyu-main/.factory/skills (plan-game, build-game, playtest, ship-game) into my personal skills folder: ~/.factory/skills on Mac, or %USERPROFILE%\.factory\skills on Windows. Create any folders that are missing, and don't change anything else. Open my-game/index.html in my browser so I can see the empty computer, then tell me to start a new session and type /plan-game.</div>
       <div class="buttons">
         <button class="btn primary" id="copy-btn" type="button">Copy prompt</button>
       </div>
@@ -195,7 +192,7 @@
   </details>
   <details>
     <summary>The kit download failed</summary>
-    <p>Ask Droid to try again. If your network blocks downloads, ask Droid to clone https://github.com/factory-ashley-jepson/retro-game instead and copy the same folders.</p>
+    <p>Ask Droid to try again. If your network blocks downloads, ask Droid to clone https://github.com/factory-ashley-jepson/retro-game-columbia-nyu instead and copy the same folders.</p>
   </details>
 
   <h2>After tonight</h2>
@@ -208,8 +205,8 @@
   </ul>
 
   <footer>
-    <p>Women in AI &middot; Vol. 01 &middot; San Francisco &middot; October 27, 2026</p>
-    <p><a href="https://github.com/factory-ashley-jepson/retro-game">Workshop kit on GitHub</a> &middot; <a href="https://docs.factory.ai">Factory docs</a></p>
+    <p>Factory Docking Station &middot; Columbia &amp; NYU &middot; New York &middot; November 13, 2026</p>
+    <p><a href="https://github.com/factory-ashley-jepson/retro-game-columbia-nyu">Workshop kit on GitHub</a> &middot; <a href="https://docs.factory.ai">Factory docs</a></p>
   </footer>
 </main>
 
