@@ -8,13 +8,13 @@
 <link rel="stylesheet" href="./assets/brand-fonts.css" />
 <style>
   :root {
-    --bg: #000;
-    --panel: #0e0c0b;
-    --border: #2a2523;
-    --text: #f5f2f0;
-    --muted: #a39892;
-    --orange: #ff5a00;
-    --orange-soft: rgba(255, 90, 0, 0.12);
+    --bg: #03050a;
+    --panel: #070c14;
+    --border: #16303d;
+    --text: #eefcff;
+    --muted: #8aa3ad;
+    --neon: #28e7ff;
+    --neon-soft: rgba(40, 231, 255, 0.1);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { background: var(--bg); }
@@ -25,7 +25,9 @@
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
     background:
-      radial-gradient(1200px 500px at 50% -180px, rgba(255, 90, 0, 0.28), transparent 70%),
+      radial-gradient(1200px 500px at 50% -180px, rgba(40, 231, 255, 0.22), transparent 70%),
+      linear-gradient(rgba(40, 231, 255, 0.05) 1px, transparent 1px) 0 0 / 40px 40px,
+      linear-gradient(90deg, rgba(40, 231, 255, 0.05) 1px, transparent 1px) 0 0 / 40px 40px,
       var(--bg);
     min-height: 100vh;
   }
@@ -44,25 +46,27 @@
     text-transform: uppercase;
     color: var(--muted);
   }
-  .eyebrow .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); margin-right: 10px; vertical-align: 1px; box-shadow: 0 0 14px rgba(255, 90, 0, 0.8); }
-  h1 { margin-top: 14px; text-align: center; font-size: clamp(36px, 7vw, 58px); font-weight: 400; line-height: 1.05; letter-spacing: -0.035em; }
+  .eyebrow .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--neon); margin-right: 10px; vertical-align: 1px; box-shadow: 0 0 14px rgba(40, 231, 255, 0.8); }
+  h1 { margin-top: 14px; text-align: center; font-size: clamp(36px, 7vw, 58px); font-weight: 400; line-height: 1.05; letter-spacing: -0.035em; text-shadow: 0 0 24px rgba(40, 231, 255, 0.45); }
+  .skyline { display: block; width: 100%; height: 70px; margin-top: 28px; }
   .lead { margin: 18px auto 0; max-width: 34em; text-align: center; color: var(--muted); font-size: 19px; }
-  .laptop-note { display: none; margin-top: 22px; padding: 12px 16px; border: 1px solid var(--orange); border-radius: 10px; background: var(--orange-soft); text-align: center; font-size: 15px; }
+  .laptop-note { display: none; margin-top: 22px; padding: 12px 16px; border: 1px solid var(--neon); border-radius: 10px; background: var(--neon-soft); text-align: center; font-size: 15px; }
   @media (max-width: 700px) { .laptop-note { display: block; } }
 
-  h2 { margin-top: 56px; font-size: 26px; font-weight: 400; letter-spacing: -0.02em; }
+  h2 { margin-top: 56px; font-family: 'Geist Mono', monospace; font-size: 22px; font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; color: var(--neon); }
+  h2::before { content: "> "; color: var(--muted); }
   h2 .time { font-family: 'Geist Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-left: 10px; }
   .sub { margin-top: 6px; color: var(--muted); }
 
   ol.steps { list-style: none; counter-reset: step; margin-top: 20px; display: grid; gap: 14px; }
-  ol.steps > li { counter-increment: step; position: relative; padding: 20px 22px 20px 70px; background: var(--panel); border: 1px solid var(--border); border-radius: 14px; }
+  ol.steps > li { counter-increment: step; position: relative; padding: 20px 22px 20px 70px; background: var(--panel); border: 1px solid var(--border); border-radius: 6px; box-shadow: inset 0 1px 0 rgba(40, 231, 255, 0.12); }
   ol.steps > li::before {
     content: counter(step);
     position: absolute; left: 20px; top: 18px;
-    width: 32px; height: 32px; border-radius: 50%;
-    display: grid; place-items: center;
+    width: 32px; height: 32px; border-radius: 4px;
+    display: grid; place-items: center; box-shadow: 0 0 14px rgba(40, 231, 255, 0.6);
     font-family: 'Geist Mono', monospace; font-size: 15px;
-    color: #000; background: var(--orange);
+    color: #000; background: var(--neon);
   }
   li h3 { font-size: 19px; font-weight: 500; letter-spacing: -0.01em; }
   li p { margin-top: 6px; color: #d9d2cd; }
@@ -75,8 +79,8 @@
     font: inherit; font-size: 15px; text-decoration: none; cursor: pointer;
     color: var(--text); background: transparent; border: 1px solid #4a423e;
   }
-  a.btn.primary, button.btn.primary { color: #000; background: var(--orange); border-color: var(--orange); }
-  a.btn:hover, button.btn:hover { border-color: var(--orange); }
+  a.btn.primary, button.btn.primary { color: #000; background: var(--neon); border-color: var(--neon); }
+  a.btn:hover, button.btn:hover { border-color: var(--neon); }
 
 
   .prompt {
@@ -90,7 +94,7 @@
   table { width: 100%; margin-top: 20px; border-collapse: collapse; font-size: 16px; }
   th, td { text-align: left; vertical-align: top; padding: 14px 12px; border-bottom: 1px solid var(--border); }
   th { font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
-  td code, p code, li code { font-family: 'Geist Mono', monospace; font-size: 0.92em; color: var(--orange); white-space: nowrap; }
+  td code, p code, li code { font-family: 'Geist Mono', monospace; font-size: 0.92em; color: var(--neon); white-space: nowrap; }
   @media (max-width: 640px) {
     main { padding: 32px 16px 72px; }
     ol.steps > li { padding: 18px 16px 18px 60px; }
@@ -109,9 +113,9 @@
   ul.plain { margin-top: 14px; padding-left: 20px; color: #d9d2cd; }
   ul.plain li { margin-top: 6px; }
 
-  .callout { margin-top: 18px; padding: 16px 18px; border-left: 3px solid var(--orange); background: var(--orange-soft); border-radius: 0 10px 10px 0; color: #eee6e1; }
+  .callout { margin-top: 18px; padding: 16px 18px; border-left: 3px solid var(--neon); background: var(--neon-soft); border-radius: 0 10px 10px 0; color: #eee6e1; }
 
-  .hero-img { display: block; width: min(560px, 100%); margin: 32px auto 0; border-radius: 14px; }
+  .hero-img { display: block; width: min(560px, 100%); margin: 32px auto 0; border-radius: 6px; border: 1px solid var(--border); box-shadow: 0 0 40px rgba(40, 231, 255, 0.15); }
 
   footer { margin-top: 64px; text-align: center; color: var(--muted); font-size: 14px; }
   footer a { color: var(--muted); }
@@ -125,9 +129,10 @@
     <span class="schools">Columbia &amp; NYU</span>
   </div>
 
-  <p class="eyebrow"><span class="dot"></span>Factory Docking Station &middot; Hands-on workshop</p>
+  <p class="eyebrow"><span class="dot"></span>[ Docking Station | New York City ] &middot; Hands-on workshop</p>
   <h1>Build your own retro game</h1>
   <p class="lead">You get an old-school computer that's switched on, with nothing inside. In 30 minutes, you'll describe a game, and Droid will plan it, build it, test it, and pack it into one file you can send to anyone. No coding experience needed.</p>
+  <svg class="skyline" viewBox="0 0 400 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 100V70H20V55H35V75H50V40H58V30H62V40H70V62H90V50H105V80H120V45H128V20H131V6H133V20H136V45H144V65H160V35H175V70H190V58H210V28H214V16H218V28H222V60H240V72H255V48H270V66H290V38H300V76H320V52H338V68H355V44H368V74H385V60H400V100Z" fill="#07101a" stroke="#28e7ff" stroke-opacity=".6" stroke-width="1.2" vector-effect="non-scaling-stroke"/></svg>
   <img class="hero-img" src="./assets/game-shell.png" alt="An empty retro computer whose screen says READY." />
   <p class="laptop-note">Open this page on your laptop: <strong id="short-url">factory-ashley-jepson.github.io/retro-game-columbia-nyu</strong></p>
 

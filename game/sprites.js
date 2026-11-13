@@ -22,7 +22,7 @@ const PALETTE = {
   Y: "#f2c94c", // yellow
   G: "#3fa34d", // green
   D: "#1f6b3a", // dark green
-  L: "#8ef0a0", // screen green (the READY. text)
+  L: "#7cf4ff", // screen cyan (the READY. text)
   B: "#3d7bd9", // blue
   N: "#1d2f6b", // navy
   C: "#7fd6e8", // cyan
